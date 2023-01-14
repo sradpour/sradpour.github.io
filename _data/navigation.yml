@@ -3,9 +3,6 @@ main:
   - title: "Publications"
     url: /publications/
   
-  - title: "Working Papers"
-    url: /workingPapers/
-
   - title: "Talks"
     url: /talks/    
 
