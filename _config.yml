@@ -181,6 +181,15 @@ collections:
   publications:
     output: true
     permalink: /:collection/:path/
+  journalArticles:
+    output: true
+    permalink: /:collection/:path/
+  workingPapers:
+    output: true
+    permalink: /:collection/:path/
+  policyNotes:
+    output: true
+    permalink: /:collection/:path/
   portfolio:
     output: false
     permalink: /:collection/:path/
