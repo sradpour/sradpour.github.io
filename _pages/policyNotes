@@ -1,11 +1,8 @@
 ---
 layout: archive
-title: "Publications"
-permalink: /publications/
+title: "Policy Notes"
+permalink: /policyNotes/
 author_profile: true
----
-
-Journal Articles
 ---
 
 {% if author.googlescholar %}
@@ -14,19 +11,6 @@ Journal Articles
 
 {% include base_path %}
 
-{% for post in site.publications reversed %}
-  {% include archive-single.html %}
-{% endfor %}
-
-Working Papers
----
-
-{% for post in site.workingPapers reversed %}
-  {% include archive-single.html %}
-{% endfor %}
-
-Policy Notes and Reports
----
 {% for post in site.policyNotes reversed %}
   {% include archive-single.html %}
 {% endfor %}
