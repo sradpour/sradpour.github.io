@@ -7,7 +7,7 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Siavash Radpour's personal website"
+title                    : "Siavash Radpour"
 title_separator          : "-"
 name                     : &name "Siavash Radpour"
 description              : &description "personal description"
