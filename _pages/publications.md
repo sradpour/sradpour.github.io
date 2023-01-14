@@ -27,3 +27,6 @@ Working Papers
 
 Policy Notes and Reports
 ---
+{% for post in site.policyNotes reversed %}
+  {% include archive-single.html %}
+{% endfor %}
