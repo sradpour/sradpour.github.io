@@ -34,17 +34,17 @@ publist = {
 #                        "permalink":"/publication/"}
 #        
 #    },
-    "journal":{
-        "file": "pubs.bib",
-        "venuekey" : "journal",
+    "policyNote":{
+        "file": "pns.bib",
+        "venuekey" : "report",
         "venue-pretext" : "",
-        "collection" : {"name":"publications",
-                        "permalink":"/publication/"}
+        "collection" : {"name":"policyNotes",
+                        "permalink":"/policyNotes/"}
     } 
 }
 
 html_escape_table = {
- #   "&": "&amp;",
+    "&": "&amp;",
     '"': "&quot;",
     "'": "&apos;"
     }
@@ -66,7 +66,7 @@ for pubsource in publist:
         pub_day = "01"
         
         b = bibdata.entries[bib_id].fields
-        
+        print(b)
         try:
             pub_year = f'{b["year"]}'
 
@@ -108,7 +108,7 @@ for pubsource in publist:
             citation = citation + "\"" + html_escape(b["title"].replace("{", "").replace("}","").replace("\\","")) + ".\""
 
             #add venue logic depending on citation type
-            venue = publist[pubsource]["venue-pretext"]+b[publist[pubsource]["venuekey"]].replace("{", "").replace("}","").replace("\\","")
+            venue = """SCEPA """ + b["type"].replace("{", "").replace("}","").replace("\\","") + """ Series"""
 
             citation = citation + " " + html_escape(venue)
             citation = citation + ", " + pub_year + "."
@@ -153,7 +153,7 @@ for pubsource in publist:
 
             md_filename = os.path.basename(md_filename)
 
-            with open("../_publications/" + md_filename, 'w') as f:
+            with open("../_policyNotes/" + md_filename, 'w') as f:
                 f.write(md)
             print(f'SUCESSFULLY PARSED {bib_id}: \"', b["title"][:60],"..."*(len(b['title'])>60),"\"")
         # field may not exist for a reference

@@ -34,17 +34,17 @@ publist = {
 #                        "permalink":"/publication/"}
 #        
 #    },
-    "journal":{
-        "file": "pubs.bib",
-        "venuekey" : "journal",
+    "workinagPaper":{
+        "file": "../working papers.bib",
+        "venuekey" : "report",
         "venue-pretext" : "",
-        "collection" : {"name":"publications",
-                        "permalink":"/publication/"}
+        "collection" : {"name":"policyNotes",
+                        "permalink":"/policyNotes/"}
     } 
 }
 
 html_escape_table = {
- #   "&": "&amp;",
+    "&": "&amp;",
     '"': "&quot;",
     "'": "&apos;"
     }
@@ -66,9 +66,10 @@ for pubsource in publist:
         pub_day = "01"
         
         b = bibdata.entries[bib_id].fields
+        print(b)
         
         try:
-            pub_year = f'{b["year"]}'
+            pub_year = f'{b["date"]}'
 
             #todo: this hack for month and day needs some cleanup
             if "month" in b.keys(): 
@@ -108,7 +109,13 @@ for pubsource in publist:
             citation = citation + "\"" + html_escape(b["title"].replace("{", "").replace("}","").replace("\\","")) + ".\""
 
             #add venue logic depending on citation type
-            venue = publist[pubsource]["venue-pretext"]+b[publist[pubsource]["venuekey"]].replace("{", "").replace("}","").replace("\\","")
+            venue = b["series"].replace("{", "").replace("}","").replace("\\","")
+            if "number" in b.keys():
+                venue = venue + """ No.""" + b["number"] 
+            if "institution" in b.keys():
+                venue = venue + ", "+ b["institution"].replace("{", "").replace("}","").replace("\\","")
+            if "location" in b.keys():
+                venue = venue + ", "+ b["location"].replace("{", "").replace("}","").replace("\\","")
 
             citation = citation + " " + html_escape(venue)
             citation = citation + ", " + pub_year + "."
@@ -153,7 +160,7 @@ for pubsource in publist:
 
             md_filename = os.path.basename(md_filename)
 
-            with open("../_publications/" + md_filename, 'w') as f:
+            with open("../../_workingPapers/"+md_filename, 'w') as f:
                 f.write(md)
             print(f'SUCESSFULLY PARSED {bib_id}: \"', b["title"][:60],"..."*(len(b['title'])>60),"\"")
         # field may not exist for a reference

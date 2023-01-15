@@ -1,0 +1,48 @@
+---
+references:
+- id: gevorkyanFinancingLowCarbonTransitions2019
+  author:
+    - family: Gevorkyan
+      given: Arkady
+    - family: Heine
+      given: Dirk
+    - family: Mazzucato
+      given: Mariana
+    - family: Flaherty
+      given: Michael
+    - family: Radpour
+      given: Siavash
+    - family: Semmler
+      given: Willi
+  citation-key: gevorkyanFinancingLowCarbonTransitions2019
+  collection-title: Policy Research Working Paper
+  event-place: Washington, DC
+  genre: Working Paper
+  issued:
+    - year: 2019
+  license: All rights reserved
+  number: '8991'
+  publisher: World Bank
+  publisher-place: Washington, DC
+  title: Financing Low-Carbon Transitions through Carbon Pricing and Green Bonds
+  type: report
+  URL: http://hdl.handle.net/10986/32316
+
+- id: ghilarducciRelativeWagesAging2017
+  author:
+    - family: Ghilarducci
+      given: Teresa
+    - family: Papadopoulos
+      given: Michael
+    - family: Radpour
+      given: Siavash
+  citation-key: ghilarducciRelativeWagesAging2017
+  collection-title: Working paper series
+  genre: Working Paper
+  issued:
+    - year: 2017
+  license: All rights reserved
+  publisher: Schwartz Center for Economic Policy Analysis (SCEPA), The New School
+  title: 'Relative Wages in Aging America: The Baby Boomer Effect'
+  type: report
+...
