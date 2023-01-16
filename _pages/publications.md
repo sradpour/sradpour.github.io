@@ -6,7 +6,7 @@ author_profile: true
 ---
 
 Journal Articles
-###
+===
 
 {% if author.googlescholar %}
   You can also find my articles on <u><a href="{{author.googlescholar}}">my Google Scholar profile</a>.</u>
@@ -19,14 +19,14 @@ Journal Articles
 {% endfor %}
 
 Working Papers
-###
+===
 
 {% for post in site.workingPapers reversed %}
   {% include archive-single.html %}
 {% endfor %}
 
 Policy Notes and Reports
-###
+===
 {% for post in site.policyNotes reversed %}
   {% include archive-single.html %}
 {% endfor %}
