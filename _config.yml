@@ -82,12 +82,12 @@ analytics:
 author:
   name             : "Siavash Radpour"
   avatar           : "sia.jpg"
-  bio              : "Economist"
-  location         : "Washington, DC"
-  employer         :
+  bio              : "Assistant Professor of Economics"
+  location         : "Galloway, DC"
+  employer         : "Stockton University"
   pubmed           : # "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
   googlescholar    : "https://scholar.google.com/citations?hl=en&user=O7vq1X4AAAAJ"
-  email            :
+  email            : "siavash.radpour@stockton.edu"
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
   uri              :
   bitbucket        :
